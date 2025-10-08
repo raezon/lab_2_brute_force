@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Bienvenue</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 id="welcomeMsg"></h1>
+  </div>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const user = params.get('user');
+    document.getElementById('welcomeMsg').textContent =
+      user ? `Bienvenue, ${user} !` : 'Bienvenue';
+  </script>
+</body>
+</html>
